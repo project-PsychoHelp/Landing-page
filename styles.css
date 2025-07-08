@@ -793,7 +793,16 @@ footer {
     height: 36px;
     background-color: #333;
     border-radius: 50%;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #4285f4;
+    transform: translateY(-3px);
 }
 
 .footer-links {
