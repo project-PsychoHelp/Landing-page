@@ -429,11 +429,23 @@ nav {
 .play-icon {
     color: #4285f4;
     margin-bottom: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.play-icon:hover {
+    transform: scale(1.1);
+    color: #2b5cd9;
 }
 
 .video-placeholder p {
     color: #666;
     font-size: 14px;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.video-placeholder p:hover {
+    color: #4285f4;
+    font-weight: 500;
 }
 
 /* Responsive design for app demo section */
