@@ -463,6 +463,180 @@ nav {
     }
 }
 
+/* Evidencias Section */
+.evidencias {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.evidencias h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.evidencias .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.evidencias-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.evidencia-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evidencia-card {
+    aspect-ratio: 8 / 6; /* Proporción ancho:alto, ajusta según prefieras */
+    height: auto;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.evidencia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.evidencia-card h3 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.evidencia-card p {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.image-placeholder {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+
+/* Sobre PsychoMetric Section */
+.sobre-psychometric {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.sobre-psychometric h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.sobre-psychometric .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.psychometric-content {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.psychometric-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.psychometric-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.psychometric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.psychometric-card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #4285f4;
+}
+
+.psychometric-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.psychometric-video {
+    flex: 1;
+}
+
+/* Responsive design for evidencias and sobre-psychometric sections */
+@media (max-width: 992px) {
+    .evidencias-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .evidencias-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .psychometric-content {
+        flex-direction: column-reverse;
+    }
+
+    .psychometric-info, .psychometric-video {
+        width: 100%;
+    }
+}
+
 /* Footer */
 footer {
     background-color: #111827;
@@ -603,4 +777,42 @@ footer {
     max-width: 100%;
     width: 100%;
     height: auto;
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+.image-modal .modal-content {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+}
+
+.image-modal .close-modal {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10001;
+    transition: color 0.2s;
+}
+
+.image-modal .close-modal:hover {
+    color: #4285f4;
 }
